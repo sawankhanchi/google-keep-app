@@ -61,6 +61,6 @@ const CreateNote = (props) => {
         </div>
     </>
   )
-}
+};
 
 export default CreateNote;

@@ -16,6 +16,14 @@ const App = () => {
     console.log(note);
   };
 
+  const onDelete = (id) => {
+    setAddItem((olddata) => 
+    olddata.filter((currdata, indx) => {
+      return indx != id;
+    })
+    );
+  };
+
   return (
     <>
     <Header />
@@ -28,6 +36,7 @@ const App = () => {
           id={index}
           title={val.title}
           content={val.content}
+          deleteItem={onDelete}
         />
       );
     })}
@@ -35,7 +44,7 @@ const App = () => {
     <Footer />
     </>
   )
-}
+};
 
 export default App;
   
