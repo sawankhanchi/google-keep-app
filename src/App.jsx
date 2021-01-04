@@ -19,7 +19,7 @@ const App = () => {
   const onDelete = (id) => {
     setAddItem((olddata) => 
     olddata.filter((currdata, indx) => {
-      return indx != id;
+      return indx !== id;
     })
     );
   };
